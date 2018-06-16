@@ -1,0 +1,314 @@
+@charset "utf-8";
+/*公共样式开始*/
+a {
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+/*用来清除浮动*/
+.clearfix::after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+}
+html,
+body {
+  width: 100%;
+}
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #eee;
+  overflow: hidden;
+}
+input {
+  outline: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  border: none;
+}
+/*公共样式结束*/
+/*头部 开始*/
+.header {
+  background-color: #000000;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+.header .header-top {
+  width: 100%;
+  height: 1.35rem;
+}
+.header .header-top .logo {
+  float: left;
+  padding: 0.26rem 0.17rem 0.21rem;
+}
+.header .header-top .logo a {
+  text-indent: -999999px;
+  display: block;
+  width: 2.4rem;
+  height: 0.88rem;
+  background: url("../img/logo.png") center no-repeat;
+  background-size: contain;
+}
+.header .header-top .menu-btn {
+  float: left;
+  width: 1.29rem;
+  height: 1.35rem;
+  background: url(../img/menuBtn.png) center 0.16rem no-repeat;
+  background-size: 0.82rem 2.33rem;
+}
+.header .header-top .navs {
+  float: right;
+  height: 100%;
+  padding-top: 0.21rem;
+}
+.header .header-top .navs a {
+  float: left;
+  width: 1.11rem;
+  height: 0.78rem;
+  font-size: 0.42rem;
+  color: #ccc;
+  border-radius: 0.08rem;
+  text-align: center;
+  line-height: 0.79rem;
+  background-color: #690;
+  margin-right: 0.15rem;
+}
+.header .header-top .navs a:nth-child(1) {
+  width: 1.3rem;
+  height: 0.88rem;
+  line-height: 0.88rem;
+  color: #fff;
+  margin: 0.03rem 0.3rem 0 0;
+  font-weight: bold;
+  border-radius: 0.1rem;
+}
+.header .search {
+  box-sizing: content-box;
+  height: 1.03rem;
+  padding: 0.16rem;
+}
+.header .search [type=text] {
+  box-sizing: border-box;
+  border: 1px solid #5a5a5a;
+  width: 8.29rem;
+  height: 1.03rem;
+  outline: none;
+  background-color: #999999;
+  padding: 0.05rem 0.1rem;
+  font-size: 0.41rem;
+  border-radius: 0.15rem;
+  color: #333;
+}
+.header .search [type=text]::-webkit-input-placeholder {
+  color: #333;
+}
+.header .search [type=text]:focus {
+  background-color: white;
+}
+.header .search [type=submit] {
+  box-sizing: border-box;
+  width: 2.03rem;
+  height: 1.03rem;
+  border: none;
+  background-color: #414040;
+  color: #ffffff;
+  font-size: 0.41rem;
+  border-radius: 0.15rem;
+  float: right;
+}
+.header .mask {
+  display: none;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 1.35rem;
+  padding: 0.1rem 0;
+  border-top: 1px solid #6a6a6a;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.header .mask li {
+  float: left;
+  width: 22.5%;
+  height: 1.35rem;
+  line-height: 1.35rem;
+  font-size: 0.54rem;
+  text-align: center;
+}
+.header .mask li a {
+  color: white;
+}
+/*头部 结束*/
+/*内容区域 开始*/
+.content {
+  margin-top: 2.7rem;
+  position: relative;
+  /*导航区域*/
+  /*轮播图*/
+  /*tab1区域*/
+}
+.content .nav-wrap {
+  height: 1.77rem;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  padding: 0.31rem 0 0.14rem;
+  background-color: #eeeeee;
+}
+.content .nav-wrap .nav {
+  white-space: nowrap;
+  width: auto;
+  float: left;
+}
+.content .nav-wrap .nav li {
+  display: inline-block;
+  white-space: nowrap;
+}
+.content .nav-wrap .nav li a {
+  white-space: nowrap;
+  color: #020202;
+  font-size: 0.62rem;
+  line-height: 1.29rem;
+  height: 1.29rem;
+  padding: 0 0.38rem;
+  display: inline-block;
+}
+.content .nav-wrap .nav li:nth-child(1) a {
+  color: #FFFFFF;
+  background-color: #690;
+}
+.content .lbt-wrap {
+  width: 100%;
+  position: relative;
+}
+.content .lbt-wrap .lbt {
+  width: 700%;
+  transform: translateX(calc(-100% / 7));
+  transition: all 0.5s;
+}
+.content .lbt-wrap .lbt li {
+  width: calc(100% / 7);
+  float: left;
+}
+.content .lbt-wrap .lbt li a {
+  display: block;
+  font-size: 0;
+}
+.content .lbt-wrap .lbt li a img {
+  width: 100%;
+}
+.content .lbt-wrap .indicator {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0.1rem;
+}
+.content .lbt-wrap .indicator span {
+  float: left;
+  width: 0.2rem;
+  height: 0.2rem;
+  background-color: red;
+  border-radius: 50%;
+  margin: 0.1rem;
+}
+.content .lbt-wrap .indicator span:nth-child(1) {
+  background-color: green;
+}
+.content .tab {
+  width: 10.46rem;
+  background-color: #fff;
+  margin: 0 auto;
+}
+.content .tab .tab_head {
+  height: 1.35rem;
+  line-height: 1.35rem;
+  display: flex;
+  justify-content: space-between;
+}
+.content .tab .tab_head h2 {
+  font-size: 0.62rem;
+  font-weight: bold;
+}
+.content .tab .tab_head a {
+  color: #000;
+  font-size: 0.55rem;
+}
+.content .tab .tab_nav {
+  position: relative;
+}
+.content .tab .tab_nav a {
+  float: left;
+  width: 1.2rem;
+  line-height: 1.05rem;
+  text-align: center;
+  font-size: 0.44rem;
+  color: #6B6B6B;
+}
+.content .tab .tab_nav a:nth-child(1) {
+  color: #000000;
+  font-weight: bold;
+}
+.content .tab .tab_nav span {
+  position: absolute;
+  width: 1.2rem;
+  height: 0.09rem;
+  background-color: #6f900d;
+  left: 0;
+  bottom: 0.05rem;
+  transition: all 0.4s;
+}
+.content .tab .tab_wrap {
+  width: 300%;
+  transform: translateX(calc(-100% / 3));
+}
+.content .tab .tab_wrap .loading {
+  width: calc(100% / 3);
+  height: 1rem;
+  float: left;
+  background: url("../img/loading.gif") center center no-repeat;
+}
+.content .tab .tab_wrap ul {
+  width: calc(100% / 3);
+  float: left;
+  display: flex;
+  flex-flow: row wrap;
+}
+.content .tab .tab_wrap ul .item {
+  width: 5.05rem;
+  margin: 0.08rem;
+  padding: 0.05rem;
+  font-size: 0.4rem;
+  background-color: #EFEFEF;
+  color: black;
+}
+.content .tab .tab_wrap ul .item a {
+  color: black;
+  display: block;
+}
+.content .tab .tab_wrap ul .item a span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.content .tab .tab_wrap ul .item .info {
+  display: flex;
+}
+.content .tab .tab_wrap ul .item .info div .info_pic {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  background: url("../img/ice.png") 0 1px no-repeat;
+}
+.content .tab .tab_wrap ul .item .info .info_left {
+  margin-right: 0.4rem;
+}
+.content .tab .tab_wrap ul .item .info .info_right .info_pic {
+  background-position: 0 -18px;
+}
+/*内容区域 结束*/
